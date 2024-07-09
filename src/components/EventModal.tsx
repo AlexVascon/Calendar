@@ -82,7 +82,7 @@ const EventModal: React.FC = () => {
               onChange={(e) =>
                 // @ts-expect-error local storage typying issue
                 setSelectedEvent((ev) => {
-                  return { ...ev, title: e.target.value };
+                  return { ...ev, title: e.target.value } as CalendarEvent;
                 })
               }
             />

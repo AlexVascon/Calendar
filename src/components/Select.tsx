@@ -25,7 +25,7 @@ const Select: React.FC = () => {
     const dayUpdate = dayjs(selectedEvent?.day).set("hour", hour).valueOf();
     // @ts-expect-error local storage typying issue
     setSelectedEvent((prevEvent) => {
-      const updatedEvent = { ...prevEvent, day: dayUpdate };
+      const updatedEvent = { ...prevEvent, day: dayUpdate } as CalendarEvent;
       return updatedEvent;
     });
   };
@@ -42,7 +42,7 @@ const Select: React.FC = () => {
     const endUpdate = dayjs(selectedEvent?.end).set("hour", hour).valueOf();
     // @ts-expect-error local storage typying issue
     setSelectedEvent((prevEvent) => {
-      const updatedEvent = { ...prevEvent, end: endUpdate };
+      const updatedEvent = { ...prevEvent, end: endUpdate } as CalendarEvent;
       return updatedEvent;
     });
   };
