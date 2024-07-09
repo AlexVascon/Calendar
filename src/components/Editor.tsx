@@ -11,7 +11,7 @@ const Editor: React.FC = () => {
       <Quill
         value={selectedEvent?.description}
         onChange={(val) =>
-          // @ts-ignore
+          // @ts-expect-error
           setSelectedEvent((event) => {
             return { ...event, description: val };
           })

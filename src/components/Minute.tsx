@@ -124,7 +124,7 @@ const Minute: React.FC<MinuteProps> = ({ day, hour, full }) => {
       const startDateTime = day.set("hour", hour).set("minute", min);
       const endDateTime = startDateTime.clone().add(1, "hour");
 
-      // @ts-ignore
+      // @ts-expect-error
       setSelectedEvent({
         ...selectedEvent,
         day: startDateTime.valueOf(),
@@ -146,7 +146,7 @@ const Minute: React.FC<MinuteProps> = ({ day, hour, full }) => {
     const startDateTime = day.set("hour", hour).set("minute", min);
     const endDateTime = startDateTime.clone().add(1, "hour");
 
-    // @ts-ignore
+    // @ts-expect-error
     setSelectedEvent({
       day: startDateTime.valueOf(),
       end: endDateTime.valueOf(),

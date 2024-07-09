@@ -80,7 +80,7 @@ const EventModal: React.FC = () => {
               required
               className="w-full border-gray-200 bg-violet-100 pb-2 pl-3 text-xl font-semibold text-gray-600 focus:border-blue-500 focus:outline-none focus:ring-0"
               onChange={(e) =>
-                // @ts-ignore
+                // @ts-expect-error
                 setSelectedEvent((ev) => {
                   return { ...ev, title: e.target.value };
                 })

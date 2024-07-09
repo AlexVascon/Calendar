@@ -63,12 +63,11 @@ const SmallCalendar: React.FC = () => {
         </div>
       </header>
       <div className="grid grid-cols-7 grid-rows-6">
-        {currentMonth[0] &&
-          currentMonth[0].map((day, i) => (
-            <span key={i} className="py-1 text-center text-sm text-slate-400">
-              {day.format("dd").charAt(0)}
-            </span>
-          ))}
+        {currentMonth[0]?.map((day, i) => (
+          <span key={i} className="py-1 text-center text-sm text-slate-400">
+            {day.format("dd").charAt(0)}
+          </span>
+        ))}
         {currentMonth.map((row, i) => (
           <React.Fragment key={i}>
             {row.map((day, idx) => (
