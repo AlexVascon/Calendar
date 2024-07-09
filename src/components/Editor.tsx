@@ -11,8 +11,7 @@ const Editor: React.FC = () => {
       <Quill
         value={selectedEvent?.description}
         onChange={(val) =>
-          // @ts-expect-error
-          // local storage typying issue
+          // @ts-expect-error local storage typying issue
           setSelectedEvent((event) => {
             return { ...event, description: val };
           })
