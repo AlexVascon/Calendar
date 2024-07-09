@@ -38,8 +38,9 @@ function savedEventsReducer(
 
 function initEvents() {
   const storageEvents = localStorage.getItem("savedEvents");
-  // @ts-ignore
-  const parsedEvents = storageEvents ? JSON.parse(storageEvents) : [];
+  const parsedEvents = storageEvents
+    ? (JSON.parse(storageEvents) as CalendarEvent[])
+    : ([] as CalendarEvent[]);
   return parsedEvents;
 }
 

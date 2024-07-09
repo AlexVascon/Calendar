@@ -12,6 +12,7 @@ const Editor: React.FC = () => {
         value={selectedEvent?.description}
         onChange={(val) =>
           // @ts-expect-error
+          // local storage typying issue
           setSelectedEvent((event) => {
             return { ...event, description: val };
           })

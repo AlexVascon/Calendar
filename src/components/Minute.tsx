@@ -125,6 +125,7 @@ const Minute: React.FC<MinuteProps> = ({ day, hour, full }) => {
       const endDateTime = startDateTime.clone().add(1, "hour");
 
       // @ts-expect-error
+      // local storage typying issue
       setSelectedEvent({
         ...selectedEvent,
         day: startDateTime.valueOf(),
@@ -147,6 +148,7 @@ const Minute: React.FC<MinuteProps> = ({ day, hour, full }) => {
     const endDateTime = startDateTime.clone().add(1, "hour");
 
     // @ts-expect-error
+    // local storage typying issue
     setSelectedEvent({
       day: startDateTime.valueOf(),
       end: endDateTime.valueOf(),
