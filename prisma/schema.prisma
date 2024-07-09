@@ -10,3 +10,15 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
+model Note {
+  id          Int      @id @default(autoincrement())
+  title       String   
+  description String?
+  lable       String?
+  authorId    String
+  date        DateTime
+  startTime   Int
+  endTime     Int
+  @@index([date, authorId])
+}
+

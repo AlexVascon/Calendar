@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.event-b {
+  margin-bottom: -2px;
+}
+
+.side {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.event-t {
+  margin-top: -2px;
+}.cross-side-borders {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.side {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.cross-top-border {
+  margin-top: -2px;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+
+.cross-bottom-border {
+  margin-bottom: -2px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
