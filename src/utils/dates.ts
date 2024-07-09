@@ -1,9 +1,9 @@
 import dayjs, { type Dayjs } from "dayjs";
-import weekDay from "dayjs/plugin/weekDay";
+import weekday from "dayjs/plugin/weekday";
 import updateLocale from 'dayjs/plugin/updateLocale';
 import type { CalendarEvent, Hours } from "~/types";
 
-dayjs.extend(weekDay);
+dayjs.extend(weekday);
 dayjs.extend(updateLocale);
 dayjs.updateLocale('en', {
   weekStart: 1 
